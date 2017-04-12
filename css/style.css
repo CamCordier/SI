@@ -1,0 +1,397 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body {
+    overflow-x: hidden;
+    padding-top:50px;
+}
+
+h1{
+    font-size: 1em;
+}
+
+h3, h4{
+    font-weight: 200;
+}
+
+.container-fluid{
+    margin: 0;
+    padding:0;
+}
+
+/* BAR DE NAVIGATION */
+
+#brand {
+    font-size : 0.5em;
+    width:100px;
+
+}
+
+#navbar {
+    font-size: 1.2em;
+    font-weight: 200;
+
+}
+
+/* AVANT-SECTION : PRESENTATION */
+
+#mainsection {
+    padding-top: 50px;
+    background: url(../images/typewriter.jpg);
+    background-size: cover;
+    height: calc(100vh - 50px)
+}
+
+.intro-message {
+    text-align: center;
+    color: black;
+    font-size: 4em;
+}
+
+/* ANIMATION AUTOUR DU TITRE SITE IMMERSIF */
+
+.svg-rectangle-rose {
+    height: 60px;
+    margin: 0 auto;
+    position: relative;
+    transform: translateY(-50%);
+    width: 320px;
+}
+
+.shape {
+    fill: transparent;
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+    stroke: #ff0097;
+}
+
+.titre {
+    color: black;
+    font-family: 'Lato';
+    font-size: 50px;
+    position: relative;
+    top: -88px;
+}
+
+@keyframes draw {
+    0% {
+        stroke-dasharray: 140 540;
+        stroke-dashoffset: -474;
+        stroke-width: 8px;
+    }
+    100% {
+        stroke-dasharray: 760;
+        stroke-dashoffset: 0;
+        stroke-width: 2px;
+    }
+}
+
+.svg-rectangle-rose:hover .shape {
+    -webkit-animation: 0.5s draw linear forwards;
+    animation: 0.5s draw linear forwards;
+}
+
+/* BOUTON COMMENCER LE COURS */
+
+
+button{
+    margin-top: 10px;
+    margin-left: 10px;
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+    height: 100px;
+    color:black;
+    font-family: 'Lato';
+}
+
+.content {
+    position: absolute;
+    display: block;
+    color: black;
+}
+
+.top {
+    padding-top:10px;
+    color: black;
+    text-align: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition: 400ms linear all;
+    z-index: 1;
+    font-family: 'Lato';
+}
+
+button::before {
+    content:"";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    bottom: 0;
+    z-index: 0;
+    -webkit-transition: 200ms linear 400ms;
+    -mz-transition: 200ms linear 400ms;
+    -o-transition: 200ms linear 400ms;
+    transition: 200ms linear 400ms;
+    background:#1ba1e2;
+    color: black;
+    border-color: #ff0097;
+    font-family: 'Lato';
+}
+
+
+.btn{
+    border-radius: 15px;
+    font-size: 20px;
+    width:220px;
+    display: block;
+    height: 50px;
+    margin-top:70px;
+    margin-left:40%;
+    border-color: #1ba1e2;
+    background-color:transparent;
+    outline: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+    -moz-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+    -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+}
+
+.btn:hover{
+    background:deeppink;
+    border-color: #ff0097;
+}
+
+.bottom{
+    padding-top:10px;
+    height: 50px;
+    width: 200px;
+    left: 0;
+    top: -50px;
+    transition: 400ms linear all;
+}
+
+button:hover .top{
+    top:-100%;
+}
+
+button:hover .bottom{
+    top: 0;
+}
+
+button:hover::before{
+    top: 0;
+}
+
+
+/* SECTION 1 : PARTIE 1 TRANSITION */
+
+#section1{
+    color:#fff;
+    background-color:#1ba1e2;
+    width:100%;
+    height:400px;
+}
+.section-transition{
+    margin-top:50px;
+}
+
+.element{
+    color:white;
+    background-color: #333333;
+    width: 50%;
+    margin-left:150px;
+}
+
+.element p{
+    font-family: 'Lato';
+    font-weight: 100;
+    font-size:12px;
+}
+
+
+/* SECTION 1 : PARTIE 2 KEYFRAMES */
+
+
+#section2{
+    background-color:#fff;
+    height:500px;
+}
+
+.section-keyframes{
+    margin-top:50px;
+}
+
+.element1{
+    color:white;
+    background-color: #333333;
+    font-size:14px;
+    margin-left:47px;
+}
+
+.element2{
+    color:white;
+    background-color: #333333;
+    font-size:11px;
+    margin-left:17px;
+}
+
+
+/* SECTION 1 : PARTIE 3 SVG */
+
+#section3{
+    color:#fff;
+    background-color:#1ba1e2;
+    width:100%;
+    height:500px;
+}
+
+.section-svg{
+    margin-top:50px;
+}
+
+.element3{
+    color:white;
+    background-color: #333333;
+    font-size:11px;
+    margin-left:50px;
+}
+
+/* SECTION 4 : RENDU */
+
+
+#section4 {
+    height:400px;
+    background: url(../images/rendu.jpg);
+    background-size:cover;
+    background-position:center;
+    margin:0;
+    padding:0;
+    min-height: 600px;
+    font-size: 20px;
+}
+
+.rendu-info{
+    color : black;
+    height: 50px;
+    font-size: 1em;
+    padding-top: 50px;
+}
+
+#rendu ul {
+    color: #ff0097;
+    margin-left: 8%;
+    margin-bottom: 2.5em;
+}
+
+#rendu li:first-line {
+    color:black
+}
+
+.soulignement{
+    text-decoration: underline;
+    color: black;
+}
+
+.soulignement:hover{
+    text-decoration: underline;
+    color: black;
+}
+
+.panneau{
+    width:20%;
+    margin-top:120px;
+}
+
+
+/* SECTION 5 : CONTACT */
+
+
+#section5 {
+    padding-top: 50px;
+    height: 550px;
+    background: url(../images/contact.jpg);
+    background-size:cover;
+    background-position:center;
+}
+
+/* SECTION 5 : BOUTON ENVOYER */
+
+button{
+    font-size: 14px;
+    width:220px;
+    display: block;
+    height: auto;
+    color:black;
+    background-color: transparent;
+    border-color: #1ba1e2;
+    border-radius:3px;
+    outline: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+    -moz-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+    -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+    padding: .5em;
+}
+
+button:hover{
+    background:#1ba1e2;
+    color: white;
+    border-color: #ff0097;
+}
+
+.form-label, .form-input{
+    position:absolute;
+    left: 31px;
+    top: 12px;
+}
+
+input:focus + .form-label{
+    color: deeppink;
+    transform: translate(-1px, -20px) scale(0.8);
+}
+
+.form-control{
+    margin-top:10px;
+    border: white;
+    border-radius: 0px;
+    font-family: 'Lato';
+}
+
+.form-control3{
+    margin-top:10px;
+    border: white;
+    border-radius: 0px;
+    font-family: 'Lato';
+    height: 102px;
+    width: 900px;
+}
+
+/* SECTION 6 : BAS DE PAGE : FOOTER*/
+
+#section6 {
+    font-size: 1.3em;
+    background-color:#333333;
+    color:white;
+    margin: 0;
+}
+
+.footer-info{
+    height:80px;
+    color:white;
+    background-color:#333333;
+    text-align:center;
+    font-family:'Lato';
+
+}
+
